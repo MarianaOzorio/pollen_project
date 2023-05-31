@@ -11,3 +11,11 @@
 .removeStyle {
     text-decoration: none;
 }
+
+.defaultSizeTitle {
+    font-size: 1.5em;
+}
+
+.defaultSizeParagraph {
+    font-size: 1em;
+}

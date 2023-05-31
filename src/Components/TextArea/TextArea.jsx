@@ -3,7 +3,7 @@ import './TextArea.css';
 
 function TextArea() {
     return(
-        <div></div>
+        <textarea></textarea>
     );
 }
 

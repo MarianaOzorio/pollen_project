@@ -1,28 +1,38 @@
-import React from 'react';
-import './Sobre.css';
+import { Link } from 'react-router-dom';
 
 function Sobre() {
     return (
         <div className='mainContainer'>
-            <h2 className='tituloSobre'>
-                O que é o Pollen Points?
+            <h2 className='defaultSizeTitle'>
+                O que é o PollenPoints?
             </h2>
-            <p className='resposta'>
-                O Pollen Points é uma forma de demonstrarmos que valorizamos o empenho e a entrega de cada colaborador. Com ele você pode escolher o prêmio que quiser sem sair de casa.
+            <p className='defaultSizeParagraph'>
+                O PollenPoints é uma loja onde as pessoas colaboradoras da cia podem adquirir produtos exclusivos. Para comprar os produtos é super simples: acumule pollens, nossa moeda de troca, e faça o seu pedido. Você poderá retirar os produtos no escritório ou receber na sua casa sem nenhum custo adicional.
             </p>
-            <br />
-            <h2 className='tituloSobre'>
-                Como acumular pollens?
+            <h2 className='defaultSizeTitle'>
+                Como ganhar pollens?
             </h2>
-            <p className='resposta'>
-                Você ganhará pontos semanais no valor de 100 pollens onde poderá acumular e trocar por prêmios no nosso site, através de premiações em treinamentos e atividades.
+            <p className='defaultSizeParagraph'>
+                Existem duas maneiras de você ganhar pollens: depois de concluir algumas tarefas listadas abaixo, e se outra pessoa colaboradora decidir compartilhar os pollens dela com você.
+                <br/> 
+                <br/>  
+                Fique atento ao prazo de validade para não perder os seus pollens. Eles são zerados sempre no dia 31 de dezembro  às 23:59 de cada ano.
+                <br/> 
+                <br/>    
+                Confira a lista de atividades que geram pollens:  
             </p>
-            <br />
-            <h2 className='tituloSobre'>
+            <ul className='defaultSizeParagraph'>
+                <li>Preenchimento do Censo</li>
+                <li>Participação no Ciclo de Gente</li>
+                <li>Conclusão de treinamentos não obrigatórios</li>
+                <li>Entrada na cia</li>
+                <li>Aniversário de cia</li>
+            </ul> 
+            <h2 className='defaultSizeTitle'>
                 Você pode ainda espelhar seus pollens por aí!
             </h2>
-            <p className='resposta'>
-                Com os seus pollens você poderá encaminhar mensagens para os seus colegas de trabalho e distribuir quantos pollens você quiser, isto lhe dará um retorno de 50 pollens, este é o momento de retribuir a ajuda que recebeu durante a semana!
+            <p className='defaultSizeParagraph'>
+                Não vai utilizar os seus pollens? Ou quer presentear seus colegas? Em <Link to="/MinhaConta">minha conta</Link> você pode compartilhá-los.
             </p>
         </div>
     )

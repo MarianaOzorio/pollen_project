@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
+
 import './MeuCarrinho.css';
 
 import CardProductPhoto from '../../Components/CardProductPhoto/CardProductPhoto';
 import FormEntrega from '../../Components/FormEntrega/FormEntrega';
-import Line from '../../Components/Line/Line';
-import Input from '../../Components/Input/Input';
+
 import storage from '../../Context/Context';
 
 function MeuCarrinho() {
@@ -33,32 +33,20 @@ function MeuCarrinho() {
     return (
         <div className=' mainContainer'>
             {!cartItens ?
-                <div>
-                    <div>Não Há itens no carrinho</div>
-                </div>
+                <p>Não há itens no carrinho</p>
                 :
                 <div>
-                    <div className='photoAndTxtContainer'>
+                    <div className='cardProductContainer'>
                         {cartItens.map((item) => (
                             < CardProductPhoto
                                 key={item.id}
                                 src={item.src}
+                                name={item.name}
+                                price={item.pollens}
+                                amount={item.quantity}
+                                total={item.subTotal}
                             />
                         ))}
-                    </div>
-                    <div>
-                        {cartItens.map((item) => (
-                            <div key={item.id}>
-                                <h3 className='ProductName'>{item.name}</h3>
-                                <Line />
-                                <p>Preço Unitário: {item.pollens} pollens</p>
-                                <label>Quantidade:</label>
-                                <br />
-                                <Input quantity={item.quantity} />
-                                <p>Subtotal: {item.subTotal} pollens</p>
-                            </div>
-                        ))
-                        }
                     </div>
                     <div className='caixa-selecao'>
                         <h2>Envio</h2>

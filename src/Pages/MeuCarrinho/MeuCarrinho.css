@@ -1,10 +1,7 @@
-.photoAndTxtContainer {
+.cardProductContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 2em;
-}
-
-.ProductName {
-    font-size: 2em;
+    justify-content: space-between;
 }

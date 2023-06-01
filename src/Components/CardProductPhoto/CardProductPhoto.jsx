@@ -1,12 +1,21 @@
 import React from "react";
 import './CardProductPhoto.css';
 
-function CardDescriptionProduct(props) {
+import Line from "../Line/Line";
+
+function CardProductPhoto(product) {
     return (
-        <div className="productPhoto">
-            <img src={props.src} alt="Foto do Produto" />
+        <div className="purchaseContainer">
+            <img className="productPhoto" src={product.src} alt="Foto do Produto" />
+            <div>
+                <h3>{product.name}</h3>
+                <Line />
+                <p>Preço Unitário: {product.price}</p>
+                <p>Quantidade: {product.amount}</p>
+                <p>Subtotal: {product.total}</p>
+            </div>
         </div>
     );
 }
 
-export default CardDescriptionProduct;
+export default CardProductPhoto;
